@@ -3,60 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Projeto Brayan & Enzo</title>
+    <title>ImGui Console - Home</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="menu-btn"><i class="fas fa-bars"></i></div>
-    
-    <nav class="sidebar">
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+    <nav class="menu-bar">
+        <a href="index.html" class="menu-item active">Home</a>
+        <a href="sobre.html" class="menu-item">Sobre</a>
+        <a href="servicos.html" class="menu-item">Serviços</a>
+        <a href="contato.html" class="menu-item">Contato</a>
     </nav>
 
-    <header>
-        <h1 class="hero-title typing"></h1>
-    </header>
+    <div class="window">
+        <div class="window-header">
+            <span>System_Welcome.exe</span>
+            <span>[X]</span>
+        </div>
+        <div class="window-content">
+            <h1>Bem-vindo ao Console Brayan & Enzo</h1>
+            <p>Iniciando sistema de portfólio interativo...</p>
+            <p style="color: #00ff00;">[OK] Assets carregados</p>
+            <p style="color: #00ff00;">[OK] Interface ImGui ativa</p>
+        </div>
+    </div>
 
-    <main class="container">
-        <div class="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Tech 1"></div>
-                <div class="carousel-item"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Tech 2"></div>
-                <div class="carousel-item"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Tech 3"></div>
-                <div class="carousel-item"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Tech 4"></div>
-            </div>
-            <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
-            <div class="carousel-indicators">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+    <div class="window">
+        <div class="window-header">
+            <span>Image_Preview_Buffer</span>
+            <span>[-]</span>
+        </div>
+        <div class="window-content">
+            <div class="carousel-container">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" class="carousel-img active">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" class="carousel-img">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" class="carousel-img">
             </div>
         </div>
+    </div>
 
-        <div class="card" style="text-align: center; margin-top: 30px;">
-            <h2>Visitas ao Site</h2>
-            <p style="font-size: 2rem; font-weight: bold;" id="visitCounter">0</p>
+    <div id="overlay" class="overlay"></div>
+    <div id="imgui-modal" class="window imgui-modal">
+        <div class="window-header">
+            <span id="modal-title">System Message</span>
+            <span id="modal-close" style="cursor:pointer;">[X]</span>
         </div>
-    </main>
-
-    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+        <div class="window-content" id="modal-body"></div>
+    </div>
 
     <footer>
-        <div class="footer-names">
-            <span class="credit-name" data-info="Brayan | Nº 5 | 2ºB Mat">Brayan <i class="fas fa-star"></i></span>
-            <span class="credit-name" data-info="Enzo | Nº 14 | 2ºB Mat">Enzo <i class="fas fa-heart"></i></span>
+        <div>System v2.0.4</div>
+        <div class="credits">
+            Criado por: 
+            <span class="creator-link" data-name="Brayan" data-turma="2ºB Mat" data-numero="5">Brayan</span> & 
+            <span class="creator-link" data-name="Enzo" data-turma="2ºB Mat" data-numero="14">Enzo</span>
         </div>
-        <p>&copy; <span id="currentYear"></span> - Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>

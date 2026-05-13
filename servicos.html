@@ -3,65 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços - Projeto Brayan & Enzo</title>
+    <title>ImGui Console - Serviços</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="menu-btn"><i class="fas fa-bars"></i></div>
-    
-    <nav class="sidebar">
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+    <nav class="menu-bar">
+        <a href="index.html" class="menu-item">Home</a>
+        <a href="sobre.html" class="menu-item">Sobre</a>
+        <a href="servicos.html" class="menu-item active">Serviços</a>
+        <a href="contato.html" class="menu-item">Contato</a>
     </nav>
 
-    <header>
-        <h1 class="hero-title neon-pulse">Nossas Soluções Criativas</h1>
-    </header>
-
-    <main class="container">
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-code fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
-                <h2>Desenvolvimento Web</h2>
-                <p>Criação de sites responsivos e de alta performance.</p>
-                <button class="btn-submit btn-more" data-title="Desenvolvimento Web" data-desc="Utilizamos as tecnologias mais modernas como HTML5, CSS3 e JavaScript para criar sites que funcionam em qualquer dispositivo.">Saiba mais</button>
+    <div class="window">
+        <div class="window-header"><span>Available_Modules.list</span></div>
+        <div class="window-content">
+            <div class="grid-2">
+                <div class="window">
+                    <div class="window-header"><span>Module_01</span></div>
+                    <div class="window-content">
+                        <h4>Web Development</h4>
+                        <button class="imgui-btn svc-btn" data-svc="Web Development" style="margin-top:10px;">Executar</button>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-header"><span>Module_02</span></div>
+                    <div class="window-content">
+                        <h4>UI/UX Design</h4>
+                        <button class="imgui-btn svc-btn" data-svc="UI/UX Design" style="margin-top:10px;">Executar</button>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <i class="fas fa-paint-brush fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
-                <h2>UI/UX Design</h2>
-                <p>Interfaces focadas na melhor experiência do usuário.</p>
-                <button class="btn-submit btn-more" data-title="UI/UX Design" data-desc="Nossa equipe foca em criar designs que não são apenas bonitos, mas também fáceis de usar e intuitivos.">Saiba mais</button>
-            </div>
-            <div class="card">
-                <i class="fas fa-mobile-alt fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
-                <h2>Apps Mobile</h2>
-                <p>Soluções mobile para Android e iOS.</p>
-                <button class="btn-submit btn-more" data-title="Apps Mobile" data-desc="Desenvolvemos aplicativos móveis que trazem a melhor experiência para seus clientes na palma da mão.">Saiba mais</button>
-            </div>
-        </div>
-    </main>
-
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <p id="modalDesc" style="margin-top: 20px; line-height: 1.6;"></p>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-names">
-            <span class="credit-name" data-info="Brayan | Nº 5 | 2ºB Mat">Brayan <i class="fas fa-star"></i></span>
-            <span class="credit-name" data-info="Enzo | Nº 14 | 2ºB Mat">Enzo <i class="fas fa-heart"></i></span>
+    <div id="overlay" class="overlay"></div>
+    <div id="imgui-modal" class="window imgui-modal">
+        <div class="window-header">
+            <span id="modal-title">System Message</span>
+            <span id="modal-close" style="cursor:pointer;">[X]</span>
         </div>
-        <p>&copy; <span id="currentYear"></span> - Todos os direitos reservados</p>
+        <div class="window-content" id="modal-body"></div>
+    </div>
+
+    <footer>
+        <div>System v2.0.4</div>
+        <div class="credits">
+            Criado por: 
+            <span class="creator-link" data-name="Brayan" data-turma="2ºB Mat" data-numero="5">Brayan</span> & 
+            <span class="creator-link" data-name="Enzo" data-turma="2ºB Mat" data-numero="14">Enzo</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
