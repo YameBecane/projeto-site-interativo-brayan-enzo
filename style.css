@@ -228,6 +228,14 @@ footer {
     display: inline-block;
     transition: var(--transition);
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.footer-names span:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+    transform: rotate(5deg) scale(1.1);
 }
 
 .footer-names span:hover {

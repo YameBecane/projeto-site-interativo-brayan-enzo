@@ -178,3 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+// Pop-up de Créditos
+document.querySelectorAll('.credit-name').forEach(name => {
+    name.addEventListener('click', () => {
+        const info = name.getAttribute('data-info');
+        alert(info);
+    });
+});
