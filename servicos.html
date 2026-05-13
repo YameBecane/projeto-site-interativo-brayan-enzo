@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Projeto Brayan & Enzo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    
+    <nav class="sidebar">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="hero-title neon-pulse">Nossas Soluções Criativas</h1>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-code fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+                <h2>Desenvolvimento Web</h2>
+                <p>Criação de sites responsivos e de alta performance.</p>
+                <button class="btn-submit btn-more" data-title="Desenvolvimento Web" data-desc="Utilizamos as tecnologias mais modernas como HTML5, CSS3 e JavaScript para criar sites que funcionam em qualquer dispositivo.">Saiba mais</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-paint-brush fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+                <h2>UI/UX Design</h2>
+                <p>Interfaces focadas na melhor experiência do usuário.</p>
+                <button class="btn-submit btn-more" data-title="UI/UX Design" data-desc="Nossa equipe foca em criar designs que não são apenas bonitos, mas também fáceis de usar e intuitivos.">Saiba mais</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt fa-3x" style="color: var(--primary-color); margin-bottom: 20px;"></i>
+                <h2>Apps Mobile</h2>
+                <p>Soluções mobile para Android e iOS.</p>
+                <button class="btn-submit btn-more" data-title="Apps Mobile" data-desc="Desenvolvemos aplicativos móveis que trazem a melhor experiência para seus clientes na palma da mão.">Saiba mais</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc" style="margin-top: 20px; line-height: 1.6;"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-names">
+            <span>Brayan <i class="fas fa-star"></i></span>
+            <span>Enzo <i class="fas fa-heart"></i></span>
+        </div>
+        <p>&copy; <span id="currentYear"></span> - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
